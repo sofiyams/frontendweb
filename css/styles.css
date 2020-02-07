@@ -23,7 +23,7 @@ nav {
 /* Inside the navigation bar */
 nav a {
   color: #F9375A;
-  text-align: left;
+  text-align: center;
   padding: 15px;
   text-decoration: none;
   font-size: 17px;
@@ -34,6 +34,7 @@ a {
   transition: 5s ease ;
   padding: 2px;
 }
+
 /* The colour of links on hover */
 nav a:hover {
   background-color: #FFEFC2;
