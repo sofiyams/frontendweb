@@ -1,0 +1,53 @@
+body {
+  background-color: #F78181;
+  font-family: sans-serif;
+}
+
+h1 {
+  display: block;
+  color: #58ACFA;
+  padding: 50px;
+  font-size: 30px;
+  text-align: center;
+  background-color: lightgrey;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+
+}
+/* Inside the navigation bar */
+nav a {
+  color: #F6CECE;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 15%;
+}
+
+a {
+  transition: 5s ease ;
+  padding: 2px;
+}
+/* The colour of links on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+main {
+  width: 85%
+  padding: 0px 30px;
+}
+
+h2 {
+  color: #F4CF3B;
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
+}
+
+.highlighted {
+  color: #eaeaea
+}
