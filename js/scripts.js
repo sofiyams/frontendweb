@@ -12,3 +12,5 @@ function greeting() {
   console.log("Sophies bakes and cakes, the best in town!")
 }
 bakes.addEventListener('click', greeting);
+
+

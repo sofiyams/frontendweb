@@ -6,18 +6,16 @@ body {
 
 header {
   overflow: auto;
-  background-color: #FFA95C
-}
-
-h1 {
-  padding: 30px;
-  font-size: 30px;
-  text-align: center;
+  background-color: #FFA95C;
+  padding: 5px;
+  float: left;
 }
 
 nav {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin: 0;
 }
 
 /* Inside the navigation bar */
@@ -37,6 +35,12 @@ a {
 
 /* The colour of links on hover */
 nav a:hover {
+  background-color: #FFEFC2;
+  color: #F9375A;
+  width: 100%;
+}
+
+nav a.active {
   background-color: #FFEFC2;
   color: #F9375A;
 }
