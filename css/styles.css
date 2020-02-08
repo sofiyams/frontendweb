@@ -25,15 +25,16 @@ nav {
   padding: 0px;
   margin: 0;
   float: left; */
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
   left: 0;
-  background-color: #FFA95C;
-  overflow-x: hidden;
-  transition: 2s;
-  padding-top: 60px;
+  background-color: #ffa95c; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   display: flex;
   justify-content: left;
   flex-direction: column;
@@ -47,7 +48,6 @@ nav a {
   text-decoration: none;
   font-size: 17px;
   width: 15%; */
-
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -67,6 +67,7 @@ nav a:hover {
   color: rgb(0, 0, 0);
 }
 
+/* Position and style the close button (top right corner) */
 nav .closebtn {
   position: absolute;
   top: 0;
