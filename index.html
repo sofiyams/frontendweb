@@ -8,22 +8,25 @@
   </head>
   <body>
     <header>
-      <nav>
-          <a href="#home">Home</a>
-          <a href="#recipes">Recipes</a>
-          <a href="#tips">Tips and FAQs</a>
-          <a href="#about">About</a>
+      <nav id="sideNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#tips">Tips and FAQs</a>
+        <a href="#about">About</a>
       </nav>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      <h1>Cakes 'n' Bakes</h1>
     </header>
     <main>
-      <p id="something">
-        something
-      </p>
       <section>
         <article id="recipes">
           <h2 id="bakes">
             Check out the different types of recipes!
           </h2>
+          <p id="something">
+            something
+          </p>
         </article>
       </section>
       <section>
