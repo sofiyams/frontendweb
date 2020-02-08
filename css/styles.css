@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(253, 181, 117);
+  background-color: #FF7E41;
   font-family: sans-serif;
   margin: 0;
 }
@@ -31,10 +31,10 @@ nav {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #ffa95c; 
+  background-color: #FF9765; 
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  transition: 2s; /* 2 second transition effect to slide in the sidenav */
   display: flex;
   justify-content: left;
   flex-direction: column;
@@ -63,7 +63,7 @@ a {
 
 /* The colour of links on hover */
 nav a:hover {
-  background-color: #FFEFC2;
+  background-color: #FFD7C3;
   color: rgb(0, 0, 0);
 }
 
@@ -98,10 +98,14 @@ h2 {
   padding: 30px;
 }
 
-.highlighted {
-  color: #eaeaea
+img {
+  height: 200px;
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
 }
 
-p {
-  text-align: center;
+.highlighted {
+  color: #eaeaea
 }
