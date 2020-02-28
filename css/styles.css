@@ -5,9 +5,11 @@ body {
 }
 
 img {
-height: 50%;
-width: 100%;
-
+  height: 15%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -35,7 +37,7 @@ nav {
   padding: 2px;
 }
 
-nav .menu {
+nav .menu, .menu1 {
   text-align: right;
 }
 
@@ -47,13 +49,17 @@ nav.open{
   opacity: 1;
 }
 
-nav a, .menu {
+nav a, .menu, .menu1 {
   padding: 0.25em 0.5em;
   text-decoration: none;
   font-size: 25px;
   color: rgb(0, 0, 0);
   display: block;
   transition: 2s;
+}
+
+.menu {
+  top: 0;
 }
 
 a {
@@ -96,6 +102,7 @@ h1.highlighted {
     width: 100%;
   }
 
-  .menu {
+  .menu1 {
+    display: none;
     }
 }
