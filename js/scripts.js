@@ -23,7 +23,7 @@ openNav.addEventListener('click', toggleNav);
 //js for qna page
 
 (() => {
-  const listElement = document.getElementById('qna');
+  const listElement = document.getElementById('shopping');
   const newItem = document.getElementById('newItem');
   const addBtn = document.getElementById('addBtn');
   const clearBtn = document.getElementById('clearBtn');
@@ -58,16 +58,16 @@ openNav.addEventListener('click', toggleNav);
       const list = items.map(item => {
         return item.textContent.slice(0, -1);
       });
-      localStorage.setItem('qna-list', list);
+      localStorage.setItem('shopping-list', list);
     } else {
-      localStorage.removeItem('qna-list');
+      localStorage.removeItem('shopping-list');
     }
   }
 
   function load() {
-    const qnaList = localStorage.getItem('qna-list');
-    if(qnaList) {
-      addList(qnaList.split(','));
+    const shoppingList = localStorage.getItem('shopping-list');
+    if(shoppingList) {
+      addList(shoppingList.split(','));
     }
   }
 
@@ -95,7 +95,7 @@ openNav.addEventListener('click', toggleNav);
   window.addEventListener('DOMContentLoaded', load);
 
   window.addEventListener('storage', ev => {
-    if(ev.key == "qna-list") {
+    if(ev.key == "shopping-list") {
       clearList();
       load();
     }
