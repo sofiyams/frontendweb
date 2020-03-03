@@ -119,24 +119,23 @@ h3, h4 {
 .container {
   position: relative;
   padding: 2px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-
+  overflow: auto;
+  display: flex;
 }
 
 .recipeBox {
-  background-color: #FF9765;
-  width: 150px;
-  border: 3px solid black;
+  width: 200px;
+  border: 1px solid black;
   padding: 10px;
   margin: 20px;
+  flex: 1;
 }
 
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
-}
+} */
   
 
 .button {
