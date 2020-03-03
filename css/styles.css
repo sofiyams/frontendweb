@@ -98,11 +98,52 @@ h1.highlighted {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 7%;
+    height: 10%;
     width: 100%;
+  }
+
+  a:hover {
+    background-color: blanchedalmond;
   }
 
   .menu1 {
     display: none;
-    }
+  }
+}
+
+h3, h4 {
+  text-align: center;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  padding: 2px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+
+.recipeBox {
+  background-color: #FF9765;
+  width: 150px;
+  border: 3px solid black;
+  padding: 10px;
+  margin: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+}
+  
+
+.button {
+  background-color: blanchedalmond;
+  border: none;
+  color: black;
+  padding: 10px;
+  text-align: right;
+  cursor: pointer;
 }

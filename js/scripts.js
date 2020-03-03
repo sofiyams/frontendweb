@@ -1,19 +1,16 @@
 "use strict";
 
-const cakes = document.getElementById("cake_bake");
-cakes.addEventListener('click', cake);
-
-function cake(e) {
-  console.log(e);
-  e.target.classList.toggle("highlighted")
-}
+// function cake(e) {
+//   console.log(e);
+//   e.target.classList.toggle("highlighted")
+// }
 
 
-const bakes = document.getElementById("bakes");
-function greeting() {
-  console.log("Sophies bakes and cakes, the best in town!")
-}
-bakes.addEventListener('click', greeting);
+// const bakes = document.getElementById("bakes");
+// function greeting() {
+//   console.log("Sophies bakes and cakes, the best in town!")
+// }
+// bakes.addEventListener('click', greeting);
 
 
 function toggleNav() {
