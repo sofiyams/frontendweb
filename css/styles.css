@@ -13,7 +13,7 @@ img {
 }
 
 h1 {
-  color: white;
+  color: blanchedalmond;
   font-size: 40px;
   text-align: center;
   padding: 30px;
@@ -83,6 +83,58 @@ h1.highlighted {
   color: red;
 }
 
+/* recipes.html styles */
+h3, h4 {
+  text-align: center;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 35px;
+  padding: 20px;
+}
+
+.cakie {
+  width: 150px;
+  height: 175px;
+}
+
+.cakebox {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.button {
+  background-color: blanchedalmond;
+  border: none;
+  color: black;
+  padding: 10px;
+  text-align: right;
+  cursor: pointer;
+}
+
+/* qna.html styles */
+
+ul {
+  padding: 1em 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+li:hover {
+  background-color: #696969;
+}
+
+main {
+  text-align: center;
+}
+
 /* Tablet nav bar */
 @media only screen and (min-width: 600px) {
 
@@ -92,13 +144,16 @@ h1.highlighted {
 }
 
 @media only screen and (min-width: 1000px) {
+    body {
+    margin: 1em auto;
+  }
 
   nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 10%;
+    height: 5%;
     width: 100%;
   }
 
@@ -109,40 +164,4 @@ h1.highlighted {
   .menu1 {
     display: none;
   }
-}
-
-h3, h4 {
-  text-align: center;
-  padding: 0;
-}
-
-.container {
-  position: relative;
-  padding: 2px;
-  overflow: auto;
-  display: flex;
-}
-
-.recipeBox {
-  width: 200px;
-  border: 1px solid black;
-  padding: 10px;
-  margin: 20px;
-  flex: 1;
-}
-
-/* .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-} */
-  
-
-.button {
-  background-color: blanchedalmond;
-  border: none;
-  color: black;
-  padding: 10px;
-  text-align: right;
-  cursor: pointer;
 }
