@@ -4,14 +4,6 @@ body {
   margin: 0;
 }
 
-img {
-  height: 15%;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 h1 {
   color: blanchedalmond;
   font-size: 40px;
@@ -84,36 +76,34 @@ h1.highlighted {
 }
 
 /* recipes.html styles */
-h3, h4 {
-  text-align: center;
-  padding: 0;
+.cake-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 35px;
-  padding: 20px;
+article.cake {
+  border: 5px solid blanchedalmond;
+  padding: 10px;
+  width: 50%;
 }
 
-.cakie {
+img {
   width: 150px;
   height: 175px;
 }
 
-.cakebox {
-  border: 1px solid black;
-  text-align: center;
-}
-
-.button {
+/* .button {
   background-color: blanchedalmond;
   border: none;
   color: black;
   padding: 10px;
   text-align: right;
   cursor: pointer;
-}
+} */
 
 /* qna.html styles */
 
@@ -137,50 +127,14 @@ main {
 
 /* ingredients styles */
 
-/* The Modal (background) */
-.recipe {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.recipe-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 /* Tablet nav bar */
 @media only screen and (min-width: 600px) {
 
   nav {
     width: 30%;
   }
+  article.cake {
+    width: 35%;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -203,5 +157,9 @@ main {
 
   .menu1 {
     display: none;
+  }
+
+  article.cake {
+    width: 25%;
   }
 }

@@ -1,27 +1,43 @@
 "use strict";
 
-// Get the modal
-var modal = document.getElement("myRecipe");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+function buildCake(cake) {
+  const article =  document.createElement('article');
+  article.classList.add('cake');
+  const h4 = document.createElement('h4');
+  h4.textContent = cake.name;
+  article.appendChild(h4);
+  const p = document.createElement('p');
+  p.textContent = cake.description;
+  article.appendChild(p);
+  const image = document.createElement('img');
+  image.src = cake.img;
+  article.appendChild(image);
+  return article;
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+const cakeData = [
+  {
+    name: "Chocolate Cake",
+    img: "../2019-20-sofiyams/img/chocolate-cake.jpg",
+    description: "Gooey chocolate cake"
+  },
+  {
+    name: "Chocolate Drip Cake",
+    img: "../2019-20-sofiyams/img/drip.jpg",
+    description: "Chocolate layered sponge cake"
+  },
+  {
+    name: "Victoria Sponge Cake",
+    img: "../2019-20-sofiyams/img/VSCake.jpg",
+    description: "Airy sponge cake"
   }
+]
+
+cakeData.forEach(loadCake);
+
+function loadCake(cake) {
+  const mycake = buildCake(cake);
+  cakes.appendChild(mycake);
 }
+
+document.getElementById('cakes').appendChild(cake);
