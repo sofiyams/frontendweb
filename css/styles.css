@@ -150,13 +150,19 @@ img {
 }
 
 .btn {
-  background-color: lightblue;
-  border: none;
-  color: black;
-  padding: 10px;
-  text-align: right;
-  cursor: pointer;
+    border: none;
+    line-height: 2.5;
+    padding: 0 15px;
+    font-size: 1rem;
+    text-align: center;
+    color: #black;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: lightblue;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
+
 
 /* qna.html styles */
 
@@ -197,14 +203,19 @@ main {
     margin: 1em auto;
   }
 
+  h1 {
+    text-align: left;
+  }
+
   nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; ;
+    justify-content: flex-start;
     align-items: center;
     height: 7%;
     width: 100%;
     left: 0;
+    opacity: 10;
   }
 
   a:hover {
@@ -218,4 +229,14 @@ main {
   article.cake {
     width: 25%;
   }
+
+  .btn:hover {
+      background-color: lightpink;
+  }
+
+  .btn:active {
+      box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                  inset 2px 2px 3px rgba(0, 0, 0, .6);
+  }
+
 }
