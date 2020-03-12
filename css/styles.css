@@ -22,7 +22,7 @@ nav {
   left: -100%;
   position: fixed;
   z-index: 1; /* Stay on top */
-  background-color: blanchedalmond;
+  background-color: #FFF4E4;
   overflow-x: hidden;
   transition: 2s;
   opacity: 0.5;
@@ -45,7 +45,7 @@ nav a, .menu, .menu1 {
   padding: 0.25em 0.5em;
   text-decoration: none;
   font-size: 25px;
-  color: skyblue;
+  color: #3399ff;
   display: block;
   transition: 2s;
 }
@@ -198,6 +198,12 @@ main {
   }
 }
 
+@media only screen and (max-width: 999px) {
+ .navigation-bar {
+   display: none;
+ }
+}
+
 @media only screen and (min-width: 1000px) {
   body {
     margin: 1em auto;
@@ -208,7 +214,7 @@ main {
   }
 
   nav {
-    overflow: hidden;
+    display: none;
   }
 
   body {
@@ -270,6 +276,8 @@ main {
   #menu {
     float: right;
   }
+
+
 
   .menu1, .menu {
     display: none;
