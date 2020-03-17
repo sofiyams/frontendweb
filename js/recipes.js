@@ -12,18 +12,23 @@ function buildCake(cake) {
   const image = document.createElement('img');
   image.src = cake.img;
   article.appendChild(image);
-  const btn = document.createElement('btn');
-  btn.textContent = cake.btn;
+  const btn = document.createElement('button');
+  btn.classList.add('btn');
+  const modal = buildCakeModal(cake);
+  article.appendChild(modal);
+  btn.setAttribute('data-target', modal.id);
+  btn.setAttribute('data-toggle','modal');
+  btn.innerHTML = "View Recipe"
   article.appendChild(btn);
   return article;
 }
+
 
 const cakeData = [
   {
     name: "Chocolate Cake",
     img: "../2019-20-sofiyams/img/chocolate-cake.jpg",
-    description: "Gooey chocolate cake",
-    button:"btn"
+    description: "Gooey chocolate cake"
   },
   {
     name: "Chocolate Drip Cake",
@@ -52,6 +57,23 @@ const cakeData = [
   },
 ]
 
+function buildCakeModal(cake){
+  const modal = document.createElement('div');
+  modal.setAttribute('class','modal');
+  const id = cake.name.replace(/\s+/g,'-').toLowerCase();
+  modal.setAttribute('id', id);
+  const innerDiv = document.createElement('div');
+  innerDiv.setAttribute('class', 'modal-window');
+  const h3 = document.createElement('h3');
+  h3.textContent = cake.name;
+  const recipe = document.createElement('p');
+  recipe.textContent = cake.description;
+  innerDiv.appendChild(h3);
+  innerDiv.appendChild(recipe);
+  modal.appendChild(innerDiv);
+  return modal;
+}
+
 cakeData.forEach(loadCake);
 
 function loadCake(cake) {
@@ -62,12 +84,14 @@ function loadCake(cake) {
 document.getElementById('cakes').appendChild(cake);
 
 document.addEventListener('click', function (e) {
+  console.log('click');
     e = e || window.event;
     const target = e.target || e.srcElement;
 
     if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'modal') {
         if (target.hasAttribute('data-target')) {
             const m_ID = target.getAttribute('data-target');
+            console.log(m_ID);
             document.getElementById(m_ID).classList.add('open');
             e.preventDefault();
         }

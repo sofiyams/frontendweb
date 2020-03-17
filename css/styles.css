@@ -149,7 +149,7 @@ img {
   display: block;
 }
 
-#btn {
+.btn {
   border: none;
   line-height: 2.5;
   padding: 0 15px;
@@ -229,7 +229,7 @@ main {
     align-items: center;
     position: static;
     width: 100%;
-    opacity: 0.75; 
+    opacity: 0.75;
   }
 
   .menu1, .menu {
@@ -240,11 +240,11 @@ main {
     width: 25%;
   }
 
-  #btn:hover {
+  .btn:hover {
       background-color: lightpink;
   }
 
-  #btn:active {
+  .btn:active {
       box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                   inset 2px 2px 3px rgba(0, 0, 0, .6);
   }
