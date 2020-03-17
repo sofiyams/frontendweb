@@ -3,15 +3,15 @@
 function buildCake(cake) {
   const article =  document.createElement('article');
   article.classList.add('cake');
+  const image = document.createElement('img');
+  image.src = cake.img;
+  article.appendChild(image);
   const h4 = document.createElement('h4');
   h4.textContent = cake.name;
   article.appendChild(h4);
   const p = document.createElement('p');
   p.textContent = cake.description;
   article.appendChild(p);
-  const image = document.createElement('img');
-  image.src = cake.img;
-  article.appendChild(image);
   const btn = document.createElement('button');
   btn.classList.add('btn');
   const modal = buildCakeModal(cake);
