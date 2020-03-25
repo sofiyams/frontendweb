@@ -27,6 +27,7 @@ nav {
   transition: 2s;
   opacity: 0.5;
   padding: 5px;
+  box-sizing: border-box;
 }
 
 nav .menu, .menu1 {
