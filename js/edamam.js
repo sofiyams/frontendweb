@@ -3,21 +3,24 @@
 const API_URL = `https://api.edamam.com/search?q=cake&app_id=3d9c5788&app_key=ec37d78e5c7a3a311ad52de140e9b815`;
 // const API_URL = `https://api.edamam.com/recipe/cake`;
 
-function buildRecipe(recipe) {
+function buildRecipe(data) {
+  let recipe = data.recipe;
   const article =  document.createElement('article');
   article.classList.add('recipe');
   const image = document.createElement('img');
-  image.src = recipe.img;
+  image.src = recipe.image;
   article.appendChild(image);
   const h4 = document.createElement('h4');
   h4.textContent = recipe.label;
   article.appendChild(h4);
-  const li = document.createElement('li');
-  li.textContent = recipe.ingredientsLines;
-  article.appendChild(li);
-  const p = document.createElement('li');
+  const ul = document.createElement('ul');
+  let li = document.createElement('li');
+  li.textContent = recipe.ingredientLines;
+  ul.appendChild(li);
+  li = document.createElement('li');
   li.textContent = recipe.healthLabels;
-  article.appendChild(li);
+  ul.appendChild(li);
+  article.appendChild(ul);
   return article;
 }
 
@@ -25,9 +28,17 @@ const getRecipeAsync = async (cakes) => {
   let response = await fetch(`${API_URL}`);
   let data = await response.json();
   console.log(data.hits);
+  const main = document.getElementsByTagName('main')[0];
+  data.hits.forEach((hit) => {
+    let article = buildRecipe(hit);
+    main.appendChild(article);
+  });
 }
 
 getRecipeAsync();
+
+
+
 
 
 // const cakeLabels = [
