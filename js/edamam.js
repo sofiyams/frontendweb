@@ -31,7 +31,7 @@ const getRecipeAsync = async (cakes) => {
   let response = await fetch(`${API_URL}`);
   let data = await response.json();
   console.log(data.hits);
-  const main = document.getElementsByTagName('main')[0];
+  const main = document.getElementsByTagName('section')[0];
   data.hits.forEach((hit) => {
     let article = buildRecipe(hit);
     main.appendChild(article);
