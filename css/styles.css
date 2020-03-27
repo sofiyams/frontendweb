@@ -163,28 +163,73 @@ img {
               inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
+<<<<<<< HEAD
 
 /* qna.html styles */
+=======
+/* edamam styles */
+>>>>>>> socialmedia
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+.recipe-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+
+article.recipe {
+  transition: 0.5s;
+  animation: fadeIn 2s;
+  border: 5px solid lightpink;
+  padding: 10px;
+  margin-bottom: 35px;
+  width: 75%;
+}
+
+article img {
+  transition: 0.5s;
+  display: block;
+  margin: auto;
+}
+
+h4 {
+  text-align: center;
+}
 
 ul {
-  padding: 1em 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 li {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-li:hover {
-  background-color: #696969;
+span {
+  display: flex;
+  width: max-content;
+  margin-bottom: 7px;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  font-family: 'Roboto Mono', monospace;
 }
 
-main {
-  text-align: center;
-}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 
-/* ingredients styles */
+}
 
 /* Tablet nav bar */
 @media only screen and (min-width: 600px) {
@@ -193,9 +238,10 @@ main {
     width: 30%;
   }
 
-  article.cake {
+  article.cake, article.recipe {
     width: 35%;
   }
+
 }
 
 @media only screen and (max-width: 999px) {
@@ -236,10 +282,11 @@ main {
     display: none;
   }
 
-  article.cake {
+  article.cake, article.recipe {
     width: 25%;
   }
 
+<<<<<<< HEAD
   .btn:hover {
       background-color: lightpink;
   }
@@ -250,4 +297,9 @@ main {
   }
 
 
+=======
+  article {
+    width: 33%;
+  }
+>>>>>>> socialmedia
 }
