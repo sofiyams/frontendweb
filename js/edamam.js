@@ -1,84 +1,42 @@
 "use strict";
 
-//js for ingredients page
+const API_URL = `https://api.edamam.com/search?q=cake&app_id=3d9c5788&app_key=ec37d78e5c7a3a311ad52de140e9b815`;
+// const API_URL = `https://api.edamam.com/recipe/cake`;
 
-(() => {
-  const listElement = document.getElementById('shopping');
-  const newItem = document.getElementById('newItem');
-  const addBtn = document.getElementById('addBtn');
-  const clearBtn = document.getElementById('clearBtn');
-
-  function addItem(item) {
-    if(!item) return;
-    const itemElement = document.createElement('li');
-    itemElement.textContent = item;
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'x';
-    itemElement.appendChild(deleteButton);
-    deleteButton.addEventListener('click', ev => {
-      listElement.removeChild(itemElement);
-      save();
-    });
-    listElement.appendChild(itemElement);
-  };
-
-  function addList(list) {
-  list.forEach(addItem);
-  }
-
-  function clearList() {
-    while(listElement.firstChild) {
-      listElement.removeChild(listElement.firstChild);
-    }
-  }
-
-  function save() {
-    const items = [...listElement.childNodes];
-    if(items.length) {
-      const list = items.map(item => {
-        return item.textContent.slice(0, -1);
-      });
-      localStorage.setItem('shopping-list', list);
-    } else {
-      localStorage.removeItem('shopping-list');
-    }
-  }
-
-  function load() {
-    const shoppingList = localStorage.getItem('shopping-list');
-    if(shoppingList) {
-      addList(shoppingList.split(','));
-    }
-  }
-
-  addBtn.addEventListener('click', ev => {
-    addList(newItem.value.split(','));
-    newItem.value = null;
-    save();
+function buildRecipe(data) {
+  let recipe = data.recipe;
+  const article =  document.createElement('article');
+  article.classList.add('recipe');
+  const image = document.createElement('img');
+  image.src = recipe.image;
+  article.appendChild(image);
+  const h4 = document.createElement('h4');
+  h4.textContent = recipe.label;
+  article.appendChild(h4);
+  const ul = document.createElement('ul');
+  recipe.ingredientLines.forEach((ingredient) => {
+    let li = document.createElement('li');
+    li.textContent = ingredient;
+    ul.appendChild(li);
+    article.appendChild(ul);
   });
-
-  newItem.addEventListener("keyup", ev => {
-    if (ev.key === "Enter") {
-      addBtn.click();
-    }
+  recipe.healthLabels.forEach((label) => {
+    let span = document.createElement('span');
+    span.textContent = label;
+    article.appendChild(span);
   });
+  return article;
+}
 
-  clearBtn.addEventListener('click', ev => {
-    clearList();
-    save();
+const getRecipeAsync = async (cakes) => {
+  let response = await fetch(`${API_URL}`);
+  let data = await response.json();
+  console.log(data.hits);
+  const main = document.getElementsByTagName('section')[0];
+  data.hits.forEach((hit) => {
+    let article = buildRecipe(hit);
+    main.appendChild(article);
   });
+}
 
-  // Saving data for later use
-  window.addEventListener('beforeunload', save);
-
-  // Loading data from local storage
-  window.addEventListener('DOMContentLoaded', load);
-
-  window.addEventListener('storage', ev => {
-    if(ev.key == "shopping-list") {
-      clearList();
-      load();
-    }
-  })
-
-})();
+getRecipeAsync();
