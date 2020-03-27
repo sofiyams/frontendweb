@@ -160,13 +160,13 @@ img {
 
 /* edamam styles */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 .recipe-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
   padding: 0;
   margin: 0;
 }
@@ -176,27 +176,39 @@ article.recipe {
   animation: fadeIn 2s;
   border: 5px solid lightpink;
   padding: 10px;
-}
-
-img.recipe {
+  margin-bottom: 35px;
   width: 75%;
-  height: 100%;
 }
 
 article img {
-  box-sizing: border-box;
   transition: 0.5s;
   display: block;
+  margin: auto;
+}
+
+h4 {
+  text-align: center;
 }
 
 ul {
-  padding: 1em 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 li {
   display: flex;
   justify-content: space-around;
+}
+
+span {
+  display: flex;
+  width: max-content;
+  margin-bottom: 7px;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  font-family: 'Roboto Mono', monospace;
 }
 
 @keyframes fadeIn {
@@ -216,19 +228,10 @@ li {
     width: 30%;
   }
 
-  article.cake {
+  article.cake, article.recipe {
     width: 35%;
   }
 
-  #gallery {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    margin: 0 auto;
-  }
-  article {
-    width: 50%;
-  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -254,23 +257,11 @@ li {
     display: none;
   }
 
-  article.cake {
+  article.cake, article.recipe {
     width: 25%;
   }
 
   article {
     width: 33%;
-  }
-}
-
-@media (hover: hover) {
-  figure {
-    background-blend-mode: luminosity;
-  }
-  article.modal figure, article:hover figure {
-    background-blend-mode: normal;
-  }
-  article:hover figcaption {
-    opacity: 0;
   }
 }

@@ -18,12 +18,17 @@ function buildRecipe(data) {
     let li = document.createElement('li');
     li.textContent = ingredient;
     ul.appendChild(li);
+    article.appendChild(ul);
   });
 
-  let li = document.createElement('li');
-  li.textContent = recipe.healthLabels;
-  ul.appendChild(li);
-  article.appendChild(ul);
+  recipe.healthLabels.forEach((label) => {
+    let span = document.createElement('span');
+    span.textContent = label;
+    article.appendChild(span);
+
+  });
+
+
   return article;
 }
 
@@ -39,8 +44,3 @@ const getRecipeAsync = async (cakes) => {
 }
 
 getRecipeAsync();
-// add in a section like recipe page
-// make healthLabels into span and loop it like ul
-// will have to change the const main to get the section and not the main perhaps?
-// style it the same way as recipes with cake grid (section) <-- put the display flex in here
-// then style recipe(article)
