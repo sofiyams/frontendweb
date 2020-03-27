@@ -1,15 +1,10 @@
 "use strict";
+let slides = document.querySelectorAll('#slides .slide');
+let currentSlide = 0;
+let slideInterval = setInterval(nextSlide,2000);
 
-const input1 = document.getElementById("something");
-input1.addEventListener('dblclick', something);
-
-function something(e) {
-  e.target.classList.toggle("highlighted")
-  console.log(e);
+function nextSlide(){
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
 }
-
-const bakes = document.getElementById("bakes");
-function greeting() {
-  console.log("Sophies bakes and cakes, the best in town!")
-}
-bakes.addEventListener('click', greeting);
