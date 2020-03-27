@@ -60,7 +60,7 @@ a {
 }
 
 main {
-  width: 85%
+  width: 85%;
   padding: 0px 30px;
 }
 
@@ -202,12 +202,15 @@ img {
   padding: 0 15px;
   font-size: 1rem;
   text-align: center;
-  color: #black;
   text-shadow: 1px 1px 1px #000;
   border-radius: 10px;
   background-color: lightblue;
   box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
               inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+p {
+  text-align: center;
 }
 
 /* edamam styles */
@@ -272,6 +275,7 @@ span {
   }
 
 }
+/* About styles */
 
 /* Tablet nav bar */
 @media only screen and (min-width: 600px) {
