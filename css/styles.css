@@ -76,6 +76,7 @@ h1.highlighted {
 }
 
 /* recipes.html styles */
+
 .cake-grid {
   display: flex;
   flex-direction: row;
@@ -99,6 +100,7 @@ img {
 }
 
 /* Popup Box */
+
 .modal {
   position: fixed;
   top: 0;
@@ -163,12 +165,7 @@ img {
               inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
-<<<<<<< HEAD
-
-/* qna.html styles */
-=======
 /* edamam styles */
->>>>>>> socialmedia
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
@@ -286,7 +283,6 @@ span {
     width: 25%;
   }
 
-<<<<<<< HEAD
   .btn:hover {
       background-color: lightpink;
   }
@@ -296,10 +292,7 @@ span {
                   inset 2px 2px 3px rgba(0, 0, 0, .6);
   }
 
-
-=======
   article {
     width: 33%;
   }
->>>>>>> socialmedia
 }
