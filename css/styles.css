@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 body {
   background-color: blanchedalmond;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -71,12 +73,11 @@ these make the slideshow work
 
 #slides {
     position: relative;
-    height: 550px;
-    width: 800px;
+    height: 250px;
+    width: 350px;
     padding: 0px;
     margin: auto;
-    margin-left: 450px;
-
+    margin-left: auto;
 }
 
 .slide {
@@ -87,10 +88,6 @@ these make the slideshow work
     height: 100%;
     opacity: 0;
     z-index: 1;
-
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
     transition: opacity 1s;
 
     padding: 10px;
@@ -215,13 +212,13 @@ p {
 
 /* edamam styles */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 .recipe-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  word-break: break-word;
   padding: 0;
   margin: 0;
 }
@@ -256,7 +253,7 @@ li {
   justify-content: space-around;
 }
 
-span {
+article span {
   display: flex;
   width: max-content;
   margin-bottom: 7px;
@@ -288,6 +285,10 @@ span {
     width: 35%;
   }
 
+  #slides {
+      height: 350px;
+      width: 450px;
+  }
 }
 
 @media only screen and (max-width: 999px) {
@@ -347,5 +348,10 @@ span {
 
   article {
     width: 33%;
+  }
+
+  #slides {
+      height: 550px;
+      width: 800px;
   }
 }
