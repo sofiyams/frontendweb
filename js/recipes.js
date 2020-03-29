@@ -54,7 +54,7 @@ const cakeData = [
     name: "Fondant Love Sponge Cake",
     img: "../2019-20-sofiyams/img/Aishteru.jpg",
     description: "Small sponge cake with fondant icing"
-  },
+  }
 ]
 
 function buildCakeModal(cake){
