@@ -295,6 +295,11 @@ article span {
 }
 /* About styles */
 
+.cake.container {
+  display: flex;
+  align-items: center;
+}
+
 section {
 	display: block;
 }
