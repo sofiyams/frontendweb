@@ -48,7 +48,7 @@ const cakeData = [
   {
     name: "Fresh Cream Fruit Cake",
     img: "../2019-20-sofiyams/img/fruit_cake.jpg",
-    description: "A fresh cream sponge cake with fresh fruit"
+    description: "Fresh cream sponge cake with fruit"
   },
   {
     name: "Fondant Love Sponge Cake",
