@@ -307,7 +307,6 @@ article span {
   100% {
     opacity: 1;
   }
-
 }
 
 /* About styles */
@@ -348,7 +347,7 @@ section {
   background-size: 50px 60px;
   background-image:
     radial-gradient(circle at 25px 15px, #542F04 30px, transparent 0px),
-    radial-gradient(circle at 25px 20px, rgba(0, 0, 0, 0.3) 30px, transparent 0px);
+    radial-gradient(circle at 25px 20px, rgba(0, 0, 0, 0.3) 15px, transparent 0px);
   background-repeat: repeat;
   animation: fadeIn 2s;
 }
@@ -361,7 +360,6 @@ section {
   border-radius: 10px;
   background-color: #542F04;
   margin-left: 10px;
-  animation: fadeIn 2s;
 }
 
 #cakie--bottom {
