@@ -5,7 +5,7 @@ const API_URL = `https://api.edamam.com/search?q=cake&app_id=3d9c5788&app_key=ec
 
 function buildRecipe(data) {
   let recipe = data.recipe;
-  const article =  document.createElement('article');
+  const article = document.createElement('article');
   article.classList.add('recipe');
   const image = document.createElement('img');
   image.src = recipe.image;

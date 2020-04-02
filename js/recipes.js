@@ -1,7 +1,7 @@
 "use strict";
 
 function buildCake(cake) {
-  const article =  document.createElement('article');
+  const article = document.createElement('article');
   article.classList.add('cake');
   const image = document.createElement('img');
   image.src = cake.img;
@@ -18,15 +18,14 @@ function buildCake(cake) {
   const modal = buildCakeModal(cake);
   article.appendChild(modal);
   btn.setAttribute('data-target', modal.id);
-  btn.setAttribute('data-toggle','modal');
+  btn.setAttribute('data-toggle', 'modal');
   btn.innerHTML = "View Recipe"
   article.appendChild(btn);
   return article;
 }
 
 
-const cakeData = [
-  {
+const cakeData = [{
     name: "Chocolate Cake",
     img: "../2019-20-sofiyams/img/chocolate-cake.jpg",
     description: "Gooey chocolate cake"
@@ -58,10 +57,10 @@ const cakeData = [
   }
 ]
 
-function buildCakeModal(cake){
+function buildCakeModal(cake) {
   const modal = document.createElement('div');
-  modal.setAttribute('class','modal');
-  const id = cake.name.replace(/\s+/g,'-').toLowerCase();
+  modal.setAttribute('class', 'modal');
+  const id = cake.name.replace(/\s+/g, '-').toLowerCase();
   modal.setAttribute('id', id);
   const innerDiv = document.createElement('div');
   innerDiv.setAttribute('class', 'modal-window');
@@ -84,24 +83,25 @@ function loadCake(cake) {
 
 document.getElementById('cakes').appendChild(cake);
 
-document.addEventListener('click', function (e) {
-  console.log('click');
+document.addEventListener('click', function(e) {
+    console.log('click');
     e = e || window.event;
     const target = e.target || e.srcElement;
 
     if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'modal') {
       if (target.hasAttribute('data-target')) {
         const m_ID = target.getAttribute('data-target');
-          console.log(m_ID);
-          document.getElementById(m_ID).classList.add('open');
-          e.preventDefault();
-        }
+        console.log(m_ID);
+        document.getElementById(m_ID).classList.add('open');
+        e.preventDefault();
       }
+    }
 
     // Close modal window with 'data-dismiss' attribute or when the backdrop is clicked
     if ((target.hasAttribute('data-dismiss') && target.getAttribute('data-dismiss') == 'modal') || target.classList.contains('modal')) {
       const modal = document.querySelector('[class="modal open"]');
       modal.classList.remove('open');
       e.preventDefault();
-    }},
-false);
+    }
+  },
+  false);
