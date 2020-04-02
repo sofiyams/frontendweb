@@ -84,14 +84,12 @@ function loadCake(cake) {
 document.getElementById('cakes').appendChild(cake);
 
 document.addEventListener('click', function(e) {
-    console.log('click');
     e = e || window.event;
     const target = e.target || e.srcElement;
 
     if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'modal') {
       if (target.hasAttribute('data-target')) {
         const m_ID = target.getAttribute('data-target');
-        console.log(m_ID);
         document.getElementById(m_ID).classList.add('open');
         e.preventDefault();
       }
