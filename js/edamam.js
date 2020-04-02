@@ -21,10 +21,12 @@ function buildRecipe(data) {
     ul.appendChild(li);
     article.appendChild(ul);
   });
+  const div = document.createElement('div');
   recipe.healthLabels.forEach((label) => {
     let span = document.createElement('span');
     span.textContent = label;
-    article.appendChild(span);
+    div.appendChild(span);
+    article.appendChild(div);
   });
   return article;
 }
