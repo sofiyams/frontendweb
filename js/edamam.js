@@ -9,6 +9,7 @@ function buildRecipe(data) {
   article.classList.add('recipe');
   const image = document.createElement('img');
   image.src = recipe.image;
+  image.alt = recipe.label;
   article.appendChild(image);
   const h4 = document.createElement('h4');
   h4.textContent = recipe.label;
@@ -28,7 +29,7 @@ function buildRecipe(data) {
   return article;
 }
 
-const getRecipeAsync = async (cakes) => {
+async function getRecipeAsync(cakes) {
   let response = await fetch(`${API_URL}`);
   let data = await response.json();
   console.log(data.hits);

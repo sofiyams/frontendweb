@@ -5,6 +5,7 @@ function buildCake(cake) {
   article.classList.add('cake');
   const image = document.createElement('img');
   image.src = cake.img;
+  image.alt = cake.description;
   article.appendChild(image);
   const h4 = document.createElement('h4');
   h4.textContent = cake.name;
@@ -89,18 +90,18 @@ document.addEventListener('click', function (e) {
     const target = e.target || e.srcElement;
 
     if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'modal') {
-        if (target.hasAttribute('data-target')) {
-            const m_ID = target.getAttribute('data-target');
-            console.log(m_ID);
-            document.getElementById(m_ID).classList.add('open');
-            e.preventDefault();
+      if (target.hasAttribute('data-target')) {
+        const m_ID = target.getAttribute('data-target');
+          console.log(m_ID);
+          document.getElementById(m_ID).classList.add('open');
+          e.preventDefault();
         }
-    }
+      }
 
     // Close modal window with 'data-dismiss' attribute or when the backdrop is clicked
     if ((target.hasAttribute('data-dismiss') && target.getAttribute('data-dismiss') == 'modal') || target.classList.contains('modal')) {
-        const modal = document.querySelector('[class="modal open"]');
-        modal.classList.remove('open');
-        e.preventDefault();
-    }
-}, false);
+      const modal = document.querySelector('[class="modal open"]');
+      modal.classList.remove('open');
+      e.preventDefault();
+    }},
+false);
