@@ -21,7 +21,7 @@ nav {
   text-align: center;
   height: 100%;
   width: 100%;
-  top: 0; /* Stay at the top */
+  top: 0;
   left: -100%;
   position: fixed;
   z-index: 99 !important;
@@ -58,7 +58,7 @@ nav a, .menu, .menu1 {
 }
 
 a {
-  transition: 2s ease ;
+  transition: 2s ease;
   padding: 2px;
 }
 
@@ -78,52 +78,52 @@ footer {
 }
 
 #slides {
-    position: relative;
-    height: 250px;
-    width: 350px;
-    padding: 0px;
-    margin: auto;
-    margin-left: auto;
+  position: relative;
+  height: 250px;
+  width: 350px;
+  padding: 0px;
+  margin: auto;
+  margin-left: auto;
 }
 
 .slide {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 2;
-    transition: opacity 1s;
-    padding: 10px;
-    box-sizing: border-box;
-    background: #333;
-    color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 1s;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
 }
 
 .showing {
-    opacity: 1;
-    z-index: 3;
+  opacity: 1;
+  z-index: 3;
 }
 
 .slide:nth-of-type(1) {
-    background: red;
+  background: red;
 }
 
 .slide:nth-of-type(2) {
-    background: black;
+  background: black;
 }
 
 .slide:nth-of-type(3) {
-    background: chocolate;
+  background: chocolate;
 }
 
 .slide:nth-of-type(4) {
-    background: #FFE5B4;
+  background: #FFE5B4;
 }
 
 .slide:nth-of-type(5) {
-    background: purple;
+  background: purple;
 }
 
 h3, article {
@@ -202,7 +202,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  color: rgba(0,0,0,0.3);
+  color: rgba(0, 0, 0, 0.3);
   height: 30px;
   width: 30px;
   font-size: 30px;
@@ -231,7 +231,7 @@ img {
   border-radius: 10px;
   background-color: lightblue;
   box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-              inset -2px -2px 3px rgba(0, 0, 0, .6);
+    inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
 p {
@@ -303,18 +303,21 @@ article span {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 
 }
+
 /* About styles */
+
 .container, .about-container {
   padding: 0px 50px;
 }
 
 section {
-	display: block;
+  display: block;
 }
 
 #cakie {
@@ -324,34 +327,34 @@ section {
 }
 
 .cakie {
-	border-radius: 20px 20px 0px 0px;
-	margin: auto;
-	background-image:
-		linear-gradient(transparent 40%, #E6C197 40%),
-		linear-gradient(transparent 35%, #542F04 35%);
-	background-size: 45px 45px;
-	background-color: #FFEDD9;
-	border: 10px solid #542F04;
-	box-shadow: 0 2px 10px black;
+  border-radius: 20px 20px 0px 0px;
+  margin: auto;
+  background-image:
+    linear-gradient(transparent 40%, #E6C197 40%),
+    linear-gradient(transparent 35%, #542F04 35%);
+  background-size: 45px 45px;
+  background-color: #FFEDD9;
+  border: 10px solid #542F04;
+  box-shadow: 0 2px 10px black;
   animation: fadeIn 2s;
 }
 
 .cakie:before {
-	content: '';
+  content: '';
   position: absolute;
   width: inherit;
   height: 25px;
   border-radius: 8px 8px 0 0;
   background-size: 50px 60px;
   background-image:
-  	radial-gradient(circle at 25px 15px, #542F04 30px, transparent 0px),
-  	radial-gradient(circle at 25px 20px, rgba(0, 0, 0, 0.3) 30px, transparent 0px);
+    radial-gradient(circle at 25px 15px, #542F04 30px, transparent 0px),
+    radial-gradient(circle at 25px 20px, rgba(0, 0, 0, 0.3) 30px, transparent 0px);
   background-repeat: repeat;
   animation: fadeIn 2s;
 }
 
 .cakie:after {
-	content: '';
+  content: '';
   position: absolute;
   width: 10px;
   height: 40px;
@@ -362,54 +365,55 @@ section {
 }
 
 #cakie--bottom {
-	height: 75px;
-	width: 200px;
+  height: 75px;
+  width: 200px;
 }
 
 #cakie--middle {
-	width: 150px;
-	height: 50px;
-	border-bottom: none;
+  width: 150px;
+  height: 50px;
+  border-bottom: none;
 }
 
 #cakie--top {
-	width: 75px;
-	height: 37.5px;
-	border-bottom: none;
+  width: 75px;
+  height: 37.5px;
+  border-bottom: none;
 }
 
 .numbers {
-	margin: -20px;
-	text-align: center;
+  margin: -20px;
+  text-align: center;
 }
 
 .candle {
-	font-size: 3.5em;
-	font-family: 'Paytone One', sans-serif;
-	color: #FF0080;
+  font-size: 3.5em;
+  font-family: 'Paytone One', sans-serif;
+  color: #FF0080;
 }
 
 /* Tablet nav bar */
-@media only screen and (min-width: 600px) {
 
+@media only screen and (min-width: 600px) {
   nav {
     width: 30%;
   }
 
-  article.cake, article.recipe {
+  article.cake,
+  article.recipe {
     width: 35%;
   }
 
   #slides {
-      height: 350px;
-      width: 450px;
+    height: 350px;
+    width: 450px;
   }
 }
 
 @media only screen and (max-width: 999px) {
- .navigation-bar {
-   display: none;
- }
+  .navigation-bar {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -439,25 +443,27 @@ section {
     opacity: 0.75;
   }
 
-  .menu1, .menu {
+  .menu1,
+  .menu {
     display: none;
   }
 
-  article.cake, article.recipe {
+  article.cake,
+  article.recipe {
     width: 25%;
   }
 
   .btn:hover {
-      background-color: lightpink;
+    background-color: lightpink;
   }
 
   .btn:active {
-      box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                  inset 2px 2px 3px rgba(0, 0, 0, .6);
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+      inset 2px 2px 3px rgba(0, 0, 0, .6);
   }
 
   #slides {
-      height: 550px;
-      width: 800px;
+    height: 550px;
+    width: 800px;
   }
 }
