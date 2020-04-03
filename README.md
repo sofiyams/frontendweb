@@ -4,11 +4,8 @@ Code for Front End Web Development Assignment CTEC3905
 ##Problems
 - The API used renders ingredients from the recipe. On Champagne Cake, the recipe on the website, has url's to other recipe pages, therefore has been pulled through onto my site. [actual page](https://api.edamam.com/recipe/champagne-cake-2a64d9455d37807aef0e5674bfa57928/cake).
 
-<<<<<<< HEAD
 - When the navbar is open in mobile view or tablet view and then pulled out to desktop view the navbar stays as a column, however if this is done from desktop to tablet or mobile it works fine.
 
-=======
->>>>>>> 1d266bd5f89d7fe5f51786ce2b5cdbcf1d73f03c
 ## References
 
 - API was used from [here](https://developer.edamam.com/edamam-docs-recipe-api).
