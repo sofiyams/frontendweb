@@ -19,7 +19,7 @@ function buildCake(cake) {
   article.appendChild(modal);
   btn.setAttribute('data-target', modal.id);
   btn.setAttribute('data-toggle', 'modal');
-  btn.innerHTML = "View Recipe"
+  btn.innerHTML = "View Recipe";
   article.appendChild(btn);
   return article;
 }

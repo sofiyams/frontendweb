@@ -124,6 +124,10 @@ hr {
   width: 100%;
 }
 
+.ingred {
+  font-weight: bold;
+}
+
 .flip-card-back {
   background-color: #FFF4E4;
   color: black;
@@ -321,7 +325,6 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  word-break: break-word;
   padding: 0;
   margin: 0;
 }
@@ -467,7 +470,6 @@ section {
 @media only screen and (min-width: 600px) {
   nav {
     width: 30%;
-    transition: 0;
   }
 
   article.cake,
