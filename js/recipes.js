@@ -54,7 +54,23 @@ const cakeData = [{
     name: "Fondant Love Sponge Cake",
     img: "../2019-20-sofiyams/img/Aishteru.jpg",
     description: "Small sponge cake with fondant icing"
+  },
+  {
+    name: "Black Forest Cake",
+    img: "../2019-20-sofiyams/img/forest.jpg",
+    description: "chocolate and cherrys with berries"
+  },
+  {
+    name: "Rainbow Pinata Cake",
+    img: "../2019-20-sofiyams/img/pinata.jpg",
+    description: "Confetti filled cake"
+  },
+  {
+    name: "Strawberry Cake",
+    img: "../2019-20-sofiyams/img/pinkcake.jpg",
+    description: "Strawberry flavoured icing cake"
   }
+
 ]
 
 function buildCakeModal(cake) {
