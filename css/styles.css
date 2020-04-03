@@ -117,7 +117,10 @@ footer {
 
 h2 {
   color: #FF0080;
-  padding: 10px;
+}
+
+hr {
+  border-color: black;
 }
 
 .flip-card-back {
@@ -191,7 +194,7 @@ input {
 }
 
 input {
-  padding-left: 1em;
+  padding-left: 0.2em;
   flex: 1;
   min-width: 5em;
 }
@@ -308,7 +311,6 @@ img {
 
 p {
   text-align: center;
-  margin-top: 0;
 }
 
 /* edamam styles */
@@ -463,6 +465,7 @@ section {
 @media only screen and (min-width: 600px) {
   nav {
     width: 30%;
+    transition: 0;
   }
 
   article.cake,
