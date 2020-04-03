@@ -82,6 +82,8 @@ function buildCakeModal(cake) {
   innerDiv.setAttribute('class', 'modal-window');
   const h3 = document.createElement('h3');
   h3.textContent = cake.name;
+  const hr = document.createElement('hr');
+  h3.appendChild(hr);
   const recipe = document.createElement('p');
   recipe.textContent = cake.description;
   innerDiv.appendChild(h3);

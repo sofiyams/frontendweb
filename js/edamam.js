@@ -11,6 +11,8 @@ function buildRecipe(data) {
   image.src = recipe.image;
   image.alt = recipe.label;
   article.appendChild(image);
+  const hr = document.createElement('hr');
+  article.appendChild(hr);
   const h4 = document.createElement('h4');
   h4.textContent = recipe.label;
   article.appendChild(h4);
