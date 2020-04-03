@@ -15,7 +15,3 @@ However, the code was built myself with some guidance of tutors.
 - Most text content was either [lorem ipsum](https://www.lipsum.com/) or hand typed.
 
 - Animated flip card was used from [here](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card).
-
-##Assumptions
-
-All pages have a scroll bar on the side assuming it is because there is more detail going down the page.
