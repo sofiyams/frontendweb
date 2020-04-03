@@ -22,29 +22,99 @@
   </header>
   <main>
     <h1>Cakes&nbsp;'n'&nbsp;Bakes</h1>
-    <section>
-      <h3>Navigate through the website to look for recipes</h3>
-      <article>
-        Browse through the recipes C'n'B have made, or take a look at <a href="edamam.html">More Recipes</a> to find recipes from a site called Edamam.
-        <p>Find out more by clicking on the <a href="about.html">About Us</a> page.</p>
-        Enjoy looking through this website!!
-      </article>
-    </section>
-    <section>
-      <div id="slides">
-        <img class="slide showing" src="img/VSCake.jpg" alt="victoria sponge cake">
-        <img class="slide" src="img/PLL.jpg" alt="pretty little liars cake">
-        <img class="slide" src="img/drip.jpg" alt="chocolate and vanilla cake">
-        <img class="slide" src="img/fruit_cake.jpg" alt="fresh cream cake">
-        <img class="slide" src="img/Aishteru.jpg" alt="fondant sponge cake">
+    <section class="flip-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class="img1" src="img/PLL.jpg" alt="Pretty Little Liars Cake">
+          </div>
+          <div class="flip-card-back">
+            <h2>PLL Cake</h2>
+            <p>Check the recipe tab to learn how to make it</p>
+            <p>Don't forget to tag us on instagram!</p>
+          </div>
+        </div>
       </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class="img1" src="img/VSCake.jpg" alt="Victoria Sponge Cake">
+          </div>
+          <div class="flip-card-back">
+            <h2>Victoria Sponge</h2>
+            <p>Check the recipe tab to learn how to make it</p>
+            <p>Don't forget to tag us on instagram!</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class="img1" src="img/drip.jpg" alt="Four layer choco cake">
+          </div>
+          <div class="flip-card-back">
+            <h2>Half & Half Cake</h2>
+            <p>Check the recipe tab to learn how to make it</p>
+            <p>Don't forget to tag us on instagram!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog-container">
+      <article class="blog">
+        <h2>Cake Community</h2>
+        <h3>Today's bake is Chocolate Ganache Cake Slices</h3>
+        <p>
+          You’ve all gone cake slice mad!
+          The amount of requests I’ve had for this recipe has been through the roof.
+          It’s an adaptation of my existing chocolate cake recipe so not reinventing the wheel here just presenting it slightly differently.
+          This recipe makes 1 tray (12 slices) using a 18cmx30cm foil tray bake tray.
+        </p>
+        <article>
+          <ul>
+            You will need;
+            <li>230g plain flour (any brand)</li>
+            <li>2 tsp baking soda</li>
+            <li>1/2 tsp baking powder</li>
+            <li>300g caster sugar (any brand)</li>
+            <li>85g cocoa powder (I use Aldi brand)</li>
+            <li>2tsp espresso powder (Nescafe Azera)</li>
+            <li>250ml whole milk</li>
+            <li>120ml vegetable oil</li>
+            <li>2 medium free range eggs</li>
+            <li>2tbsp boiling hot water</li>
+            <li>400g milk chocolate droetker is the best for this</li>
+            <li>200ml double cream</li>
+            <li>1 tin of carnation caramel</li>
+            <li>50g toasted chopped hazelnuts</li>
+        </article>
+        <article>
+          <p>
+            Mix all the ingredients in a bowl before pouring in to the tray
+            Level out the mixture and place in a pre-heated oven at 160C Fan for 30-38 mins. Do not be tempted to open the oven door during baking. Wait until at least 30 mins has passed (cake will sink in the middle if you do). Do the skewer test to ensure it’s fully baked, remove and cool the cake in the tin
+            Meanwhile whip up the ganache.
+            Place the chocolate & double cream in to a bowl and microwave at 20 second intervals, mixing each time (use a whisk to combine) until it’s fully incorporated. Cover with clingfilm (ensure it’s touching the surface of the ganache) and leave it to cool/set in a cool place for 45-60 mins minimum.
+            Place your preferred piping nozzle in a piping bag & fill it with the cooled ganache. Cut the tray in to 12 equal slices before piping on the ganache. Drizzle on the caramel and top with nuts before serving.
+            You can also top with jam & raspberries or use biscoff spread and crushed biscuits, completely your choice!
+          </p>
+        </article>
+      </article>
+      <article class="ingredients">
+        <h2>Ingredients for today's bake</h2>
+        <div>
+          <input placeholder="Add ingredients you need" id="newItem">
+          <button id="addBtn">Add</button>
+        </div>
+        <ul id="shopping"></ul>
+        <button id="clearBtn">Clear</button>
+      </article>
     </section>
   </main>
   <script src="js/scripts.js"></script>
   <script src="js/index.js"></script>
-  <div>
-    <footer>Cakes from cakes 'n' bakes</footer>
-  </div>
+  <footer>
+    <p>Cakes from cakes 'n' bakes</p>
+  </footer>
 </body>
 
 </html>
