@@ -487,11 +487,6 @@ section {
     width: 40%;
   }
 
-  .logo {
-    height: 15%;
-    width: 50%;
-  }
-
   article.cake,
   article.recipe {
     width: 35%;
@@ -512,14 +507,9 @@ section {
   }
 
   .logo {
-    display: none;
-  }
-
-  .hero {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    width: 7%;
+    height: 5em;
+    margin-right: auto;
   }
 
   nav {
@@ -530,11 +520,8 @@ section {
     width: 100%;
     height: auto;
     opacity: inherit;
-    background-color: transparent;
     position: absolute;
     left: 0;
-    top: 0;
-    right: 16px;
   }
 
   nav a:hover {
