@@ -67,7 +67,7 @@ a {
 
 .hero {
   width: 100%;
-  height: 25em;
+  height: 17em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -255,7 +255,7 @@ article#cake {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  width: 37%;
+  width: 50%;
   margin-bottom: 35px;
 }
 
@@ -491,6 +491,10 @@ section {
   article.recipe {
     width: 35%;
   }
+
+  .hero {
+    height: 25em;
+  }
 }
 
 @media only screen and (max-width: 999px) {
@@ -510,6 +514,10 @@ section {
     width: 7%;
     height: 5em;
     margin-right: auto;
+  }
+
+  .hero {
+    height: 30em;
   }
 
   nav {
